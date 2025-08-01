@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <script src="./script.js" defer></script>
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+   <div class="container">
+    <div class="header">
+      <h1>Secure Password Generator</h1>
+      <p>Create strong, unique passwords with one click</p>
+    </div>
+    
+    <div class="password-display">
+      <div class="password-field">
+        <input type="text" class="password-input" id="passwordDisplay" placeholder="Your secure password" readonly>
+        <button class="copy-btn" id="copyBtn">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
+      <div class="copy-message" id="copyMessage">Copied!</div>
+    </div>
+    
+    <div class="settings-container">
+      <div class="setting-group">
+        <h3><i class="fas fa-ruler"></i> Password Length</h3>
+        <div class="length-control">
+          <div class="length-label">Length</div>
+          <div class="length-value" id="lengthDisplay">10</div>
+        </div>
+        <div class="slider-container">
+          <input type="range" min="6" max="30" value="10" class="slider" id="lengthSlider">
+        </div>
+      </div>
+      
+      <div class="setting-group">
+        <h3><i class="fas fa-check-circle"></i> Password Options</h3>
+        <div class="options-grid">
+          <div class="option-item">
+            <input type="checkbox" id="uppercase" checked>
+            <label for="uppercase">Uppercase Letters</label>
+          </div>
+          <div class="option-item">
+            <input type="checkbox" id="lowercase" checked>
+            <label for="lowercase">Lowercase Letters</label>
+          </div>
+          <div class="option-item">
+            <input type="checkbox" id="numbers" checked>
+            <label for="numbers">Numbers</label>
+          </div>
+          <div class="option-item">
+            <input type="checkbox" id="symbols" checked>
+            <label for="symbols">Symbols</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="strength-display">
+        <div class="strength-label">STRENGTH</div>
+        <div class="strength-value" id="strengthText">MEDIUM</div>
+        <div class="strength-indicator">
+          <div class="strength-bar" id="bar1"></div>
+          <div class="strength-bar" id="bar2"></div>
+          <div class="strength-bar" id="bar3"></div>
+          <div class="strength-bar" id="bar4"></div>
+        </div>
+      </div>
+      
+      <button class="generate-btn" id="generateBtn">
+        <i class="fas fa-key"></i> GENERATE PASSWORD
+      </button>
+    </div>
+    
+    <div class="footer">
+      <p>Your passwords are generated locally and never leave your device</p>
+    </div>
+  </div>
+  <script src="script.js"></script>"
+</body>
+</html>
